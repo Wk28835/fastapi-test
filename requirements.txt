@@ -1,0 +1,21 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+
+# Qdrant
+qdrant-client
+
+# PostgreSQL / SQLAlchemy
+psycopg2-binary
+sqlalchemy
+
+# Gemini (Google Generative AI embeddings)
+google-generativeai
+
+# Network + Multipart
+aiohttp
+python-multipart
+
+# Optional utilities
+requests
