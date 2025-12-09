@@ -13,7 +13,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",    # Docusaurus dev
-        "https://your-github-pages-url",  # (add later)
+        "https://hackathonq4-seven.vercel.app",
+        "https://fastapi-test-murex-sigma.vercel.app",  # (add later)
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -23,12 +24,12 @@ app.add_middleware(
 # Health check route
 @app.get("/")
 def root():
-    return {"status": "RAG API running successfully"}
+   return {"status": "RAG API running successfully"}
 
 # RAG endpoints
-app.include_router(rag_router, prefix="/rag")
+#app.include_router(rag_router, prefix="/rag")
 # Summarizer endpoints
-app.include_router(summarizer_router, prefix="/summarizer", tags=["Summarizer"])
+#app.include_router(summarizer_router, prefix="/summarizer", tags=["Summarizer"])
 
 app.include_router(qa_router, prefix="/qa")
-app.include_router(translate_router, prefix="/translate")
+#app.include_router(translate_router, prefix="/translate")
